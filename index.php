@@ -2,16 +2,21 @@
     <head>
         <script>
             function schieten(q){
-                document.getElementById("square"+q).style.backgroundColor = 'red';
+                if(q==22 || q ==23){
+                    document.getElementById("square"+q).style.backgroundColor = 'red';                    
+                }else{
+                    document.getElementById("square"+q).style.backgroundColor = 'blue';                    
+                   
+                }
             }
         </script>
     </head>
     <body>
         <table border="1">
             <?php
-                for($x = 0; $x < 10; $x++){   
+                for($x = 1; $x < 11; $x++){   
                     echo "<tr>";
-                    for($y = 0; $y < 10; $y++){
+                    for($y = 1; $y < 11; $y++){
                         echo "<td onclick='schieten($x$y)' id=square$x$y >Text</td>\n";                    
                     }
                     echo "</tr>\n";
