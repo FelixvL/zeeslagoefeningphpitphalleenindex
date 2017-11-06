@@ -1,8 +1,8 @@
 <html>
     <head>
         <script>
-            function schieten(){
-                alert();
+            function schieten(q){
+                document.getElementById("square"+q).style.backgroundColor = 'red';
             }
         </script>
     </head>
@@ -12,7 +12,7 @@
                 for($x = 0; $x < 10; $x++){   
                     echo "<tr>";
                     for($y = 0; $y < 10; $y++){
-                        echo "<td onclick='schieten()' >Text</td>\n";                    
+                        echo "<td onclick='schieten($x$y)' id=square$x$y >Text</td>\n";                    
                     }
                     echo "</tr>\n";
                 }
